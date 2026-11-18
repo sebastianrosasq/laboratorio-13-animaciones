@@ -21,5 +21,16 @@ import androidx.compose.ui.unit.dp
         Box(Modifier.fillMaxWidth().height(130.dp)) {
             Box(Modifier.offset(x = desplazamiento).size(tamano).background(Color(0xFFE68046)))
         }
+        Text("Orden de modificadores", style = MaterialTheme.typography.titleMedium)
+        Row(horizontalArrangement = Arrangement.spacedBy(18.dp)) {
+            Column(horizontalAlignment = androidx.compose.ui.Alignment.CenterHorizontally) {
+                Box(Modifier.background(Color(0xFFD5CCF0)).padding(12.dp).size(38.dp).background(Color(0xFF65509D)))
+                Text("Fondo antes", style = MaterialTheme.typography.labelMedium)
+            }
+            Column(horizontalAlignment = androidx.compose.ui.Alignment.CenterHorizontally) {
+                Box(Modifier.padding(12.dp).size(38.dp).background(Color(0xFF65509D)))
+                Text("Padding antes", style = MaterialTheme.typography.labelMedium)
+            }
+        }
     }
 }
