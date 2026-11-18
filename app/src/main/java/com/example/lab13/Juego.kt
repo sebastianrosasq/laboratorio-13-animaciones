@@ -31,7 +31,7 @@ import androidx.compose.ui.unit.sp
         }
         Box(Modifier.fillMaxWidth().height(260.dp).background(fondo, RoundedCornerShape(20.dp))) {
             Text("✦     ·       ✧        ·       ✦", Modifier.align(Alignment.TopCenter).padding(18.dp), color = Color.White)
-            AnimatedVisibility(visible = jugando, enter = fadeIn(tween(600)) + scaleIn(), exit = fadeOut(tween(500))) {
+            androidx.compose.animation.AnimatedVisibility(visible = jugando, enter = fadeIn(tween(600)) + scaleIn(), exit = fadeOut(tween(500))) {
                 Box(Modifier.fillMaxSize()) { Text("★", Modifier.offset(x = movimiento, y = 90.dp).scale(escala), color = Color(0xFFFFD766), fontSize = 64.sp) }
             }
             AnimatedContent(targetState = puntos, transitionSpec = { fadeIn(tween(300)) togetherWith fadeOut(tween(300)) }, modifier = Modifier.align(Alignment.BottomStart).padding(18.dp), label = "puntos") { valor ->
@@ -40,3 +40,4 @@ import androidx.compose.ui.unit.sp
         }
     }
 }
+
